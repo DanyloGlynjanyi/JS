@@ -32,7 +32,7 @@ let firstName = 'Danyil'
 let middleName = 'Borysovych'
 let lastName = 'Glynjanyi'
 
-console.log(`${firstName}${middleName}${lastName}`)
+console.log(`${firstName} ${middleName} ${lastName}`)
 // - За допомогою оператора typeof визначити типи наступних змінних та вивести їх в консоль
 //    let a = 100; let b = '100'; let c = true;
 let a = 100;
