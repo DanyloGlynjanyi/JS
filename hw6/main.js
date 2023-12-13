@@ -45,8 +45,8 @@ const sortNums = (nums, direction) => {
 };
 
 let nums = [11, 21, 3];
-console.log(sortNums(nums, 'ascending')); // [3, 11, 21]
-console.log(sortNums(nums, 'descending')); // [21, 11, 3]
+console.log(sortNums(nums, 'ascending')); 
+console.log(sortNums(nums, 'descending')); 
 
 // ==========================
 // - є масив
@@ -89,8 +89,8 @@ const cards = [
     {cardSuit: 'clubs', value: '7', color: 'black'},
     {cardSuit: 'clubs', value: '8', color: 'black'},
     {cardSuit: 'clubs', value: '9', color: 'black'},
+    {cardSuit: 'сlubs', value: 'ace', color: 'black'},
     {cardSuit: 'clubs', value: '10', color: 'black'},
-    {cardSuit: 'spade', value: 'ace', color: 'black'},
     {cardSuit: 'clubs', value: 'jack', color: 'black'},
     {cardSuit: 'clubs', value: 'queen', color: 'black'},
     {cardSuit: 'clubs', value: 'king', color: 'black'},
