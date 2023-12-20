@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #wrapper {
+            width: 15vw;
+            padding: 10px;
+        }
+
+        .item {
+            margin-top: 10px;
+            border: 2px solid;
+        }
+    </style>
+</head>
+
+<body>
+<div id="wrapper"></div>
+<!--//     зробити масив на 100 об'єктів та дві кнопки prev next-->
+<!--// при завантажені сторінки з'являються перші 10 об'єктів.-->
+<!--//     При натисканні next виводяться настпні 10 об'єктів-->
+<!--// При натисканні prev виводяться попередні 10 об'єктів-->
+
+
+<button id="prev" disabled="disabled">prev</button>
+<button id="next">next</button>
+<script>
+    let arrTrash = [
+        {"title": "Harry Potter", "type": "book"},
+        {"title": "Harry Potter", "type": "book"},
+        {"title": "Harry Potter", "type": "book"},
+        {"title": "Harry Potter", "type": "book"},
+        {"title": "Harry Potter", "type": "book"},
+        {"title": "Harry Potter", "type": "book"},
+        {"title": "Harry Potter", "type": "book"},
+        {"title": "Harry Potter", "type": "book"},
+        {"title": "Harry Potter", "type": "book"},
+        {"title": "vasdsad", "type": "book"},
+        {"title": "vasdsad", "type": "book"},
+        {"title": "vasdsad", "type": "book"},
+        {"title": "vasdsad", "type": "book"},
+        {"title": "vasdsad", "type": "book"},
+        {"title": "vasdsad", "type": "book"},
+        {"title": "vasdsad", "type": "book"},
+        {"title": "vasdsad", "type": "book"},
+        {"title": "vasdsad", "type": "book"},
+        {"title": "vasdsad", "type": "book"},
+        {"title": "vasdsad", "type": "book"},
+        {"title": "vasdsad", "type": "book"},
+        {"title": "vasdsad", "type": "book"},
+        {"title": "vasdsad", "type": "book"},
+        {"title": "vasdsad", "type": "book"},
+        {"title": "vasdsad", "type": "book"},
+        {"title": "vasdsad", "type": "book"},
+        {"title": "vasdsad", "type": "book"},
+        {"title": "vasdsad", "type": "book"},
+        {"title": "vasdsad", "type": "book"},
+        {"title": "vasdsad", "type": "book"},
+        {"title": "vasdsad", "type": "book"},
+        {"title": "vasdsad", "type": "book"},
+        {"title": "vasdsad", "type": "book"},
+        {"title": "vasdsad", "type": "book"},
+        {"title": "Harry Potter", "type": "book"},
+        {"title": "Harry Potter", "type": "book"},
+        {"title": "Harry Potter", "type": "book"},
+        {"title": "Harry Potter", "type": "book"},
+        {"title": "Harry Potter", "type": "book"},
+        {"title": "Harry Potter", "type": "book"},
+        {"title": "Harry Potter", "type": "book"},
+        {"title": "Harry Potter", "type": "book"},
+        {"title": "Harry Potter", "type": "book"},
+        {"title": "Harry Potter", "type": "book"},
+        {"title": "Harry Potter", "type": "book"},
+        {"title": "Harry Potter", "type": "book"},
+        {"title": "Harry Potter", "type": "book"},
+        {"title": "Harry Potter", "type": "book"},
+        {"title": "Harry Potter", "type": "book"},
+        {"title": "Harry Potter", "type": "book"},
+        {"title": "Harry Potter", "type": "book"},
+        {"title": "Harry Potter", "type": "book"},
+        {"title": "Harry Potter", "type": "book"},
+        {"title": "Harry Potter", "type": "book"},
+        {"title": "Harry Potter", "type": "book"},
+        {"title": "Harry Potter", "type": "book"},
+        {"title": "Harry Potter", "type": "book"},
+        {"title": "Harry Potter", "type": "book"},
+        {"title": "Harry Potter", "type": "book"},
+        {"title": "Harry Potter", "type": "book"},
+        {"title": "Harry Potter", "type": "book"},
+        {"title": "Harry Potter", "type": "book"},
+        {"title": "Harry Potter", "type": "book"},
+        {"title": "Harry Potter", "type": "book"},
+        {"title": "Harry Potter", "type": "book"},
+        {"title": "Harry Potter", "type": "book"},
+        {"title": "Harry Potter", "type": "book"},
+        {"title": "Harry Potter", "type": "book"},
+        {"title": "Harry Potter", "type": "book"},
+        {"title": "Harry Potter", "type": "book"},
+        {"title": "Harry Potter", "type": "book"},
+        {"title": "Harry Potter", "type": "book"},
+        {"title": "Harry Potter", "type": "book"},
+        {"title": "Harry Potter", "type": "book"},
+        {"title": "Harry Potter", "type": "book"},
+        {"title": "Harry Potter", "type": "book"},
+        {"title": "Harry Potter", "type": "book"},
+        {"title": "Harry Potter", "type": "book"},
+        {"title": "Harry Potter", "type": "book"},
+        {"title": "Harry Potter", "type": "book"},
+        {"title": "Harry Potter", "type": "book"},
+        {"title": "Harry Potter", "type": "book"},
+        {"title": "Harry Potter", "type": "book"},
+        {"title": "Harry Potter", "type": "book"},
+        {"title": "Harry Potter", "type": "book"},
+        {"title": "Harry Potter", "type": "book"},
+        {"title": "Harry Potter", "type": "book"},
+        {"title": "Harry Potter", "type": "book"},
+        {"title": "Harry Potter", "type": "book"},
+        {"title": "Harry Potter", "type": "book"},
+        {"title": "Harry Potter", "type": "book"},
+        {"title": "Harry Potter", "type": "book"},
+        {"title": "Harry Potter", "type": "book"},
+        {"title": "Harry Potter", "type": "book"},
+        {"title": "Harry Potter", "type": "book"},
+        {"title": "Harry Potter", "type": "book"},
+        {"title": "Harry Potter", "type": "book"},
+        {"title": "Harry Potter", "type": "book"},
+        {"title": "Harry Potter", "type": "book"},
+        {"title": "Harry Potter", "type": "book"},
+        {"title": "Harry Potter", "type": "book"},
+        {"title": "Harry Potter", "type": "book"},
+        {"title": "Harry Potter", "type": "book"},
+        {"title": "Harry Potter", "type": "book"},
+        {"title": "Harry Potter", "type": "book"},
+        {"title": "Harry Potter", "type": "book"},
+        {"title": "Harry Potter", "type": "book"},
+        {"title": "Harry Potter", "type": "book"},
+        {"title": "Harry Potter", "type": "book"},
+        {"title": "Harry Potter", "type": "book"},
+        {"title": "Harry Potter", "type": "book"}
+    ]
+    const prev = document.getElementById('prev');
+    const next = document.getElementById('next');
+    let page = 1;
+
+    const handler = (page, limit = 10) => {
+        const wrapper = document.getElementById('wrapper');
+
+        const startIndex = (page - 1) * limit;
+        let endIndex = page * limit;
+
+        if (startIndex > 0) {
+            prev.removeAttribute('disabled');
+        } else {
+            prev.setAttribute('disabled', 'disabled');
+        }
+        if (endIndex < arrTrash.length) {
+            next.removeAttribute('disabled');
+        } else {
+            next.setAttribute('disabled', 'disabled');
+            endIndex = arrTrash.length;
+        }
+        const arr = [];
+
+        for (let i = startIndex; i < endIndex; i++) {
+            const item = document.createElement('div');
+            const title = document.createElement('div');
+            const type = document.createElement('div');
+
+            const obj = arrTrash[i];
+            item.classList.add('wrapper', 'item')
+
+            title.innerText = `title: ${obj.title}`;
+            type.innerText = `type: ${obj.type}`;
+
+            item.append(title, type);
+            arr.push(item);
+        }
+
+        wrapper.replaceChildren(...arr);
+    }
+
+    handler(page);
+    prev.addEventListener('click', () => {page -= 1;handler(page)});
+    next.addEventListener('click', () => {page += 1;handler(page)});
+
+</script>
+</body>
+</html>
+
+<!--------------- Ну і звісно сквідвард---------------->
+<!--.-->
+<!--⠄⠄⠄⠄⠄⠄⠄⠄⢀⣀⡀⠠⠤⠄⣀⣀-->
+<!--⠄⠄⠄⠄⣀⢤⡒⠉⠁⠄⠒⢂⡀⠄⠄⠄⠈⠉⣒⠤⣀-->
+<!--⠄⠄⣠⠾⠅⠈⠄⠙⠄⠄⠄⠈⠄⠄⢀⣀⣓⡀⠉⠄⠬⠕⢄-->
+<!--⠄⣰⠁⠄⠄⠄⠄⠄⠄⠄⠄⠄⢀⡤⠶⢦⡀⠑⠄⠄⠄⠄⠈⢧-->
+<!--⠄⡇⠄⠄⠄⠄⠄⢤⣀⣀⣀⣀⡀⢀⣀⣀⠙⠄⠄⠄⠄⠄⠄⢸-->
+<!--⠄⢹⡀⠄⠄⠄⠄⡜⠁⠄⠄⠙⡴⠁⠄⠄⠱⡄⠄⠄⠄⠄⠄⣸-->
+<!--⠄⠄⠱⢄⡀⠄⢰⣁⣒⣒⣂⣰⣃⣀⣒⣒⣂⢣⠄⠄⠄⢀⡴⠁-->
+<!--⠄⠄⠄⠄⠙⠲⢼⡀⠄⠙⠄⢠⡇⠄⠛⠄⠄⣌⣀⡤⠖⠉-->
+<!--⠄⠄⠄⠄⠄⠄⢸⡗⢄⣀⡠⠊⠈⢦⣀⣀⠔⡏-->
+<!--⠄⠄⠄⠄⠄⠄⠈⡇⠄⢰⠁⠄⠄⠄⢣⠄⠄⣷-->
+<!--⠄⠄⠄⠄⣠⠔⠊⠉⠁⡏⠄⠄⠄⠄⠘⡆⠤⠿⣄⣀-->
+<!--⠄⠄⠄⠄⣧⠸⠒⣚⡩⡇⠄⠄⠄⠄⠄⣏⣙⠒⢴⠈⡇-->
+<!--⠄⠄⠄⠄⠈⠋⠉⠄⠄⢳⡀⠄⠄⠄⣸⠁⠈⠉⠓⠚⠁-->
+<!--⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠉⠓⠛⠛-->
+
+
