@@ -5,6 +5,7 @@ overflow: hidden;
 }
 body {
     background-image: url("https://w.forfun.com/fetch/02/029f3932cdb5d6880a1cc2e0a9ba65ed.jpeg");
+    font-family: 'Harry Potter', sans-serif;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
