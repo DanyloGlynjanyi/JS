@@ -93,3 +93,65 @@ li {
     opacity: 0;
     pointer-events: none;
 }
+body {
+    /* Ваші поточні стилі */
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(255, 223, 0, 0.8);
+}
+
+.user-info {
+    /* Ваші поточні стилі */
+    position: relative;
+    z-index: 1;
+}
+
+.user-info::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 20px rgba(255, 223, 0, 0.8) inset;
+    z-index: -1;
+}
+
+.butt_det,
+.butt-del {
+    position: relative;
+    z-index: 1;
+    transition: background-color 0.1s ease, transform 0.3s ease;
+}
+
+.butt_det:hover,
+.butt-del:hover {
+    background-color: #555;
+    transform: scale(1.05);
+}
+
+.butt-det:active,
+.butt-del:active {
+    background-color: #333;
+}
+
+.butt-del.clicked {
+    opacity: 0;
+    pointer-events: none;
+}
+
+@keyframes magicalShadow {
+    0% {
+        box-shadow: 0 0 20px rgba(255, 223, 0, 0.8);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(255, 223, 0, 0.8);
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(255, 223, 0, 0.8);
+    }
+}
+
+.user-info:hover {
+    animation: magicalShadow 1s infinite;
+}
