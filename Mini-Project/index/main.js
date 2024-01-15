@@ -6,7 +6,7 @@ const magicWord = prompt('Enter "Yes" if you are ready for magic:');
 const correctMagicWord = 'Yes';
 
 if (magicWord !== correctMagicWord) {
-    alert('Sorry, you are not ready for magic. Please try again later.');
+    alert('Sorry, you are a muggle');
 } else {
 
     const url = new URL(' https://jsonplaceholder.typicode.com/users')
