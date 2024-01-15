@@ -70,7 +70,6 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 5px;
-    font-size: 18px;
 }
 
 .postBlock {
@@ -82,7 +81,8 @@ body {
     padding: 10px;
     border: 2px solid rgba(0, 0, 0, 0.5);
     border-radius: 10px;
-    background: rgba(0, 0, 0, 0.5);
+    background: linear-gradient(to right, #4B0082, #800080, #4169E1, #9932CC, #4169E1, #8A2BE2, #4169E1, #9932CC, #8A2BE2);
+    color: #221f1f;
     transition: opacity 1s ease-in-out, transform 1s ease-in-out;
 }
 
@@ -103,9 +103,8 @@ body {
 }
 
 .btnGo {
-
     position: fixed;
-    bottom: 10px;
+    bottom: 5px;
     left: 15%;
     text-align: center;
     display: flex;
